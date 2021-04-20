@@ -30,6 +30,7 @@ function toWord(inputNum, type) {
       else { return ":( Too large, try a number below at or below 999 Quattuorvigintillion (10 to the 75th power)"; }
       // Numbersare from the Wikipedia 'Names of large numbers' page
    }
+   function commas(num) { return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
    function eToO(num) {
      return (''+ +num).replace(/(-?)(\d*)\.?(\d*)e([+-]\d+)/,
        function(a,b,c,d,e) {
