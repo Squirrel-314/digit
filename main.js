@@ -1,6 +1,5 @@
 function toWord(inputNum, type) {
-   if (typeof inputNum) { inputNum = eToO(inputNum); }
-   let num = inputNum;
+   let num = parseInt(inputNum);
    if (num.toFixed().toString().length < 7) { if (num != num.toFixed()) { num = num.toFixed(2); } return commas(num); }
    else {
       num = eToO(num.toFixed());
