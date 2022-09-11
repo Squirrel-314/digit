@@ -1,0 +1,17 @@
+.notify {
+   padding: .2rem 1rem;
+   margin: .4rem;
+   border-radius: .5rem;
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+.warn {
+   background-color: #f25d5d;
+   border-left: solid .4rem #f04949;
+}
+
+.info {
+   background-color: #8888ff;
+   border-left: solid .4rem #7979f3;
+}
