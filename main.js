@@ -30,15 +30,17 @@ function toWord(inputNum, type) {
       if (findTerrain(70)) { return returnNum(70, (type === "short" ? "Du" : "Duovigintillion")); }
       if (findTerrain(73)) { return returnNum(73, (type === "short" ? "Tr" : "Tresvigintillion")); }
       if (findTerrain(76)) { return returnNum(76, (type === "short" ? "Qua" : "Quattuorvigintillion")); }
-      // If it is in scientific notation
-      if (num.toString().includes("e")) { return "Digit.js overflow! Your number is too large. Best of luck! 💖"; }
+      else {
+         console.warn(`The number you inputed to digit.js (${inputNum}) has passed the numbers we've added. I'll put commas in it for now.`);
+         return commas(num);
+      }
    }
    function findTerrain(terrain) {
       if (num.length === terrain || num.length === terrain + 1 || num.length === terrain + 2) { return true; }
       else { return false; }
    }
    function returnNum(number, str) {
-      if (num.length == number) { num = `${num.substring(0, 1)}.${num.substring(1, 2)}${str}`; }
+      if (num.length == number) { num = `${num.substring(0, 1)}.${num.substring(1, 2)} ${str}`; }
       else if (num.length == (number + 1)) { num = `${num.substring(0, 2)}.${num.substring(2, 3)} ${str}`; }
       else if (num.length == (number + 2)) { num = `${num.substring(0, 3)}.${num.substring(3, 4)} ${str}`; }
       return num;
@@ -46,7 +48,4 @@ function toWord(inputNum, type) {
 }
 
 // Stops decimals at thousandths
-function commas(num) { return num.toLocaleString("en-US"); }
-
-// Puts commas in the decimals
-// function commasOld(num) { return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function commas(num) { return num.toLocaleString(); }
