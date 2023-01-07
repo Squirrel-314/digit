@@ -1,0 +1,34 @@
+body {
+   background-color: #f9f9f9;
+}
+
+.content {
+   padding: 2em 1.6em;
+   margin: 4em auto;
+   max-width: 50em;
+   border-radius: .3em;
+   background-color: #fff;
+   box-shadow: 0 .1em .2em #ddd;
+}
+
+h1 {
+   margin: .4em 0;
+   text-align: center;
+}
+
+.note {
+   margin: .4em 0;
+   padding: .6em 1em;
+   background-color: #b5ffde; /* #3effa8 */
+   border-radius: .3em;
+}
+
+.landing-section {
+   margin: 1em .4em;
+   color: #222;
+}
+
+.landing-section h2 {
+   color: #444;
+   font-weight: 600;
+}
