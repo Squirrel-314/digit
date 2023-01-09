@@ -3,23 +3,55 @@
 <head>
    <meta name="theme-color" content="#82ffc7">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/global.css">
+   <link rel="stylesheet" href="../global.css">
    <link rel="stylesheet" href="docs.css">
-   <link rel="stylesheet" href="/prismjs.css">
+   <link rel="stylesheet" href="../prismjs.css">
    <title>Getting Started | Digit.js</title>
 </head>
+<style>
+body {
+   padding-left: 5em;
+   padding-right: 5em;
+   padding-bottom: 5em;
+}
+@media only screen and (max-width: 800px) {
+   body {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+   }
+}
+p { margin: .6em 0; }
+code { font-family: monospace; }
+</style>
 <body>
    <nav>
       <a href="/">Home</a>
-      <a href="docs/">Docs</a>
+      <a href="/docs/">Docs</a>
       <a href="https://github.com/editorrust/digit">GitHub</a>
    </nav>
-   <p>This is the getting started guide...</p>
-   <br>
+   <h2>Getting Started</h2>
    <p>Paste this into your head tag...</p>
    <pre><code class="language-html">&lt;!-- Editor Rust's Digit.js library -->
 &lt;script src="https://editorrust.github.io/digit/main.js"></script></code></pre>
    <p>... And you're ready to go!</p>
+   <br><br>
+   <h2>Test it!</h2>
+   <p>Let's start with a large number. How about 1000000000000? Try sending that to the console.</p>
+   <pre><code class="language-javascript">console.log(1000000000000);</code></pre>
+   <p>That should return this:</p>
+   <pre><code class="language-javascript">1000000000000</code></pre>
+   <p>That's impossible to read! Try adding commas to it with the <code>commas</code> function.</p>
+   <pre><code class="language-javascript">1,000,000,000,000</code></pre>
+   <p>That's much better! But what if we wanted to make it even more readable? We could use the <code>toWord</code> function, like so:</p>
+   <pre><code class="language-javascript">toWord(1000000000000);</code></pre>
+   <p>And that should return...</p>
+   <pre><code class="language-javascript">"1.0 Trillion"</code></pre>
+   <p>Awesome! But let's say we're a little short for space. We can use the <code>type</code> parameter to shorten the word.</p>
+   <pre><code class="language-javascript">toWord(1000000000000, "short");</code></pre>
+   <p>Which returns...</p>
+   <pre><code class="language-javascript">"1.0 t"</code></pre>
+   <p>And that's it! Simple, right? And you're ready to start using digit.js!</p>
+   <p>If you want to learn more, check out the <a href="index.html">docs -></a></p>
 </body>
 <script src="/prismjs.js"></script>
 </html>

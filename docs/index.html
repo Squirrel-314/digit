@@ -2,26 +2,63 @@
 <html lang="en">
 <head>
    <meta name="theme-color" content="#82ffc7">
-   <link rel="stylesheet" href="/global.css">
+   <link rel="stylesheet" href="../global.css">
    <link rel="stylesheet" href="docs.css">
+   <link rel="stylesheet" href="../prismjs.css">
    <title>Documentation | Digit.js</title>
 </head>
+<style>
+body {
+   padding-left: 5em;
+   padding-right: 5em;
+   padding-bottom: 5em;
+}
+@media only screen and (max-width: 800px) {
+   body {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+   }
+}
+p { margin: .6em 0; }
+code { font-family: monospace; }
+</style>
 <body>
    <nav>
       <a href="/">Home</a>
-      <a href="docs/">Docs</a>
+      <a href="#">Docs</a>
       <a href="https://github.com/editorrust/digit">GitHub</a>
    </nav>
-   <p>The <code>toWord</code> function can hold numbers up to Quattuorvigintillion</p>
-   <p>The <code>commas</code> function will put commas into any work.</p>
+   <p>New to Digit.js?</p>
+   <a href="getting-started.html">Check out the getting started guide</a>
+   <br><br>
+   <h1>Functions</h1>
    <br>
-   <div class="notify warn">
-      <p>Warning: toWord will remove decimal points after a certiant amount</p>
-   </div>
-   <div class="notify info">
-      <p>Reserved keywords: toWord, commas</p>
-   </div>
+   <h2><code>toWord(number, type)</code></h2>
+   <p>Takes in numbers and returns with commas or in word format.</p>
+   <p>It can take numbers up to Quattuorvigintillion, after which it's just return it with commas.</p>
+   <p>Numbers under seven charecters will be returned with commas, but without other formatting.</p>
    <br>
+   <p>The <code>toWord</code> function takes in two parameters, <code>number</code> and <code>type</code>.</p>
+   <p><code>number</code> takes in a number value</p>
+   <p><code>type</code> takes one value, <code>"short"</code>, which will return short numbers, like t instead of trillion. Leave it empty for long numbers.</p>
+   <br>
+   <p>Usage</p>
+   <pre><code class="language-javascript">// Returns "1 B"
+console.log(toWord(1000000000, "short"));</code></pre>
+   <br>
+   <h2><code>commas(number)</code></h2>
+   <p>The <code>commas</code> function will put commas into any number.</p>
+   <br>
+   <p>Usage</p>
+   <pre><code class="language-javascript">// Returns "1,000,000,000"
+console.log(commas(1000000000));</code></pre>
+   <br><br>
+   <h1>Library reserved words</h1>
+   <p>Reserved keywords: toWord, commas</p>
+   <br><br>
+   <h2>Notes?</h2>
    <p>Eventually, I'll dynamically generate the names for the numbers, but for now it's manual.</p>
+   <p>Thanks for coming :)</p>
 </body>
+<script src="/prismjs.js"></script>
 </html>
