@@ -24,7 +24,7 @@ code { font-family: monospace; }
 </style>
 <body>
    <nav>
-      <a href="/">Home</a>
+      <a href="../">Home</a>
       <a href="#">Docs</a>
       <a href="https://github.com/editorrust/digit">GitHub</a>
    </nav>
@@ -33,32 +33,73 @@ code { font-family: monospace; }
    <br><br>
    <h1>Functions</h1>
    <br>
-   <h2><code>toWord(number, type)</code></h2>
-   <p>Takes in numbers and returns with commas or in word format.</p>
-   <p>It can take numbers up to Quattuorvigintillion, after which it's just return it with commas.</p>
-   <p>Numbers under seven charecters will be returned with commas, but without other formatting.</p>
-   <br>
-   <p>The <code>toWord</code> function takes in two parameters, <code>number</code> and <code>type</code>.</p>
-   <p><code>number</code> takes in a number value</p>
-   <p><code>type</code> takes one value, <code>"short"</code>, which will return short numbers, like t instead of trillion. Leave it empty for long numbers.</p>
-   <br>
-   <p>Usage</p>
-   <pre><code class="language-javascript">// Returns "1 B"
+   <div>
+      <h2><code>toWord(number, type)</code></h2>
+      <p>Takes in numbers and returns with commas or in word format.</p>
+      <p>It can take numbers up to Novemvigintillion, after which returns the inputed number but with commas.</p>
+      <p>Numbers under seven charecters will be returned with commas, but without other formatting.</p>
+      <br>
+      <p>The <code>toWord</code> function takes in two parameters, <code>number</code> and <code>type</code>. Type is optional, it defaults to long</p>
+      <p><code>number</code> takes in a number value</p>
+      <p><code>type</code> takes one value, <code>"short"</code>, which will return short numbers, like t instead of trillion.</p>
+      <br>
+      <p>Usage</p>
+      <pre><code class="language-javascript">// Returns "1 B"
 console.log(toWord(1000000000, "short"));</code></pre>
+   </div>
    <br>
-   <h2><code>commas(number)</code></h2>
-   <p>The <code>commas</code> function will put commas into any number.</p>
+   <div>
+      <h2><code>dateIs(date, format)</code></h2>
+      <p>Takes in a date object and returns it in a specified format.</p>
+      <p>It supports d/m/y, m/d/y, and a special format - Short month day full year, like Mar 30 2023.</p>
+      <br>
+      <p>The <code>dateIs</code> function takes in two parameters, <code>date</code> and <code>format</code>.</p>
+      <p><code>date</code> accepts a date object</p>
+      <p><code>format</code> takes in a string, <code>"dmy"</code>, <code>"mdy</code>, or <code>"quick"</code>. If nothing is inpputed for format, it defaults to <code>.toLocaleString()</code></p>
+      <br>
+      <p>Usage</p>
+      <pre><code class="language-javascript">// Returns "30/3/23" (for today anyway :)
+console.log(dateIs(new Date(), "dmy"));</code></pre>
+   </div>
    <br>
-   <p>Usage</p>
-   <pre><code class="language-javascript">// Returns "1,000,000,000"
-console.log(commas(1000000000));</code></pre>
+   <div>
+      <h2><code>timeIs(date, format)</code></h2>
+      <p>Takes in a date object and returns the time in a specified format.</p>
+      <p>It supports 12 and 24 hour time, defaulting to 24.</p>
+      <br>
+      <p>The <code>timeIs</code> function takes in two parameters, <code>date</code> and <code>format</code>.</p>
+      <p><code>date</code> accepts a date object</p>
+      <p><code>format</code> takes in a string, <code>"12"</code> or nothing if you want 24 hour time.</p>
+      <br>
+      <p>Usage</p>
+      <pre><code class="language-javascript">// Returns "15:57" (for today anyway :)
+console.log(timeIs(new Date()));</code></pre>
+   </div>
+   <br>
+   <div>
+      <h2><code>timeBetween(date, date2)</code></h2>
+      <p>Shows time difference between two dates, and if there's no second date, it defaults to now (your now, in my future)</p>
+      <p>It prints it out in a compact readable format, like "7 years" or "2 hours". If you want another format option, add an issue to the repository.</p>
+      <br>
+      <p>The <code>timeBetween</code> function takes in two parameters, <code>date</code> and <code>date2</code>.</p>
+      <p><code>date</code> accepts a date object</p>
+      <p><code>date2</code> also accepts a date object, but it will default to the present if you leave it empty.</p>
+      <br>
+      <p>Usage</p>
+      <pre><code class="language-javascript">// Returns "about 3 months"
+console.log(timeIs(new Date("12/2/22")));</code></pre>
+   </div>
    <br><br>
-   <h1>Library reserved words</h1>
-   <p>Reserved keywords: toWord, commas</p>
+   <div>
+      <h1>Library reserved words</h1>
+      <p>Reserved keywords: toWord, dateIs, timeIs, timeBetween</p>   
+   </div>
    <br><br>
-   <h2>Notes?</h2>
-   <p>Eventually, I'll dynamically generate the names for the numbers, but for now it's manual.</p>
-   <p>Thanks for coming :)</p>
+   <div>
+      <h2>Notes?</h2>
+      <p>Eventually, I'll dynamically generate the names for the numbers, but for now it's manual.</p>
+      <p>Thanks for coming :)</p>   
+   </div>
 </body>
 <script src="../prismjs.js"></script>
 </html>

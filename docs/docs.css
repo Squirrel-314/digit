@@ -15,3 +15,7 @@
    background-color: #8888ff;
    border-left: solid .4rem #7979f3;
 }
+
+code * {
+   font-family: "Courier New", Courier, monospace;
+}
