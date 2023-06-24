@@ -13,16 +13,10 @@
 // Numbers are from the Wikipedia "Names of large numbers" page on the short scale
 
 // Returns number in word format
-function toWord(inputNum, type, decmialPrecision) {
+function toWord(inputNum, type) {
    let num = Number(inputNum);
    // If the number is less than 7 digits, just put in commas
-   if (num.toFixed().length < 7) {
-      if (decmialPrecision == 0) return (Math.round(num)).toLocaleString();
-      else if (decmialPrecision == 1) return (Math.round(num * 10) / 10).toLocaleString();
-      else if (decmialPrecision == 2) return (Math.round(num * 100) / 100).toLocaleString();
-      else if (decmialPrecision == 3) return (Math.round(num * 1000) / 1000).toLocaleString();
-      else return num.toLocaleString();
-   }
+   if (num.toFixed().length < 7) { return num.toLocaleString(); }
    else {
       num = num.toFixed();
       if (findTerrain(7)) return returnNum(7, "M", "Million");

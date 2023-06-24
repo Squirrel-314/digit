@@ -18,8 +18,8 @@ a {
 nav {
    position: absolute;
    top: .6em;
-   width: 14em;
-   left: calc(50% - 9em);
+   width: 22em;
+   left: calc(50% - 13em);
    padding: .6em 1.4em;
    display: block;
    text-align: center;

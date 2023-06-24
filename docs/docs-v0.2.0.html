@@ -26,7 +26,6 @@ code { font-family: monospace; }
    <nav>
       <a href="../">Home</a>
       <a href="#">Docs</a>
-      <a href="../changelog.html">Changelog</a>
       <a href="https://github.com/editorrust/digit">GitHub</a>
    </nav>
    <p>New to Digit.js?</p>
@@ -35,7 +34,7 @@ code { font-family: monospace; }
    <h1>Functions</h1>
    <br>
    <div>
-      <h2><code>toWord(number, type, decimalPrecision)</code></h2>
+      <h2><code>toWord(number, type)</code></h2>
       <p>Takes in numbers and returns with commas or in word format.</p>
       <p>It can take numbers up to Novemvigintillion, after which returns the inputed number but with commas.</p>
       <p>Numbers under seven charecters will be returned with commas, but without other formatting.</p>
@@ -43,7 +42,6 @@ code { font-family: monospace; }
       <p>The <code>toWord</code> function takes in two parameters, <code>number</code> and <code>type</code>. Type is optional, it defaults to long</p>
       <p><code>number</code> takes in a number value</p>
       <p><code>type</code> takes one value, <code>"short"</code>, which will return short numbers, like t instead of trillion.</p>
-      <p><code>decimalPrecision</code> is an optional value, it takes in a whole number from <code>0</code> to <code>3</code>, then determines how many decimial points of precision are in the result. It applies to numbers less than one million. It will not fill in empty spots.</p>
       <br>
       <p>Usage</p>
       <pre><code class="language-javascript">// Returns "1 B"
