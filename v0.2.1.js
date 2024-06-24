@@ -114,7 +114,7 @@ function timeIs(date, format) {
       let dateObj = new Date(date);
       if (date.getHours() == "0") return `12:${date.getMinutes()} a.m.`;
       else if (date.getHours() < 12) return `${dateObj.getHours()}:${date.getMinutes()} a.m.`;
-      else return `${date.getHours() % 12 || 12}:${date.getMinutes()} p.m`;
+      else return `${date.getHours() % 12 || 12}:${date.getMinutes()} p.m.`;
    }
    else {
       // 24 hour time
