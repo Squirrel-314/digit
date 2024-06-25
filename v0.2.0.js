@@ -2,7 +2,7 @@
 // About
 // ======================================
 
-// This library was created and is maintained by Editor Rust
+// This library was created and is maintained by Hamza Nasher-Alneam
 // A small but helpful library that handles all your time and number needs.
 // Current version: v0.2.0
 
